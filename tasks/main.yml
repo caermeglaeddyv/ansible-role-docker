@@ -11,8 +11,9 @@
 - name: install docker-ce
   yum:
     name:
-    - "docker-ce-{{ docker_ce_version }}"
-    - "containerd.io-{{ docker_containerd_version }}"
+    - docker-ce-{{ docker_ce_version }}
+    - docker-ce-cli-{{ docker_ce_version }}
+    - containerd.io-{{ docker_containerd_version }}
     state: present
     allow_downgrade: yes
 
